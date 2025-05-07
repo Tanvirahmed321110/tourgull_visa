@@ -54,7 +54,7 @@ header img {
     margin: 0px auto;
     width: 100%;
     max-width: 1140px;
-    margin-top: 150px;
+    margin-top: 250px;
     border-radius: 12px;
 }
 
@@ -159,12 +159,13 @@ header img {
 
 
 /*==============  Tab Section start here  ==============*/
-.tab-area .search-country-name input {
+.search-country-name input {
     width: 300px;
     border: none;
     border-radius: 4px;
     background-color: var(--white);
     padding: 14px;
+    box-shadow: var(--shadow-1);
 }
 
 .search-country-name input::placeholder {
@@ -172,13 +173,118 @@ header img {
 }
 
 
+.tab-contents .item,
+.destination-items .item {
+    position: relative;
+    transition: .25s linear;
+    cursor: pointer;
+}
+
+.tab-contents .item:hover,
+.destination-items .item:hover {
+    border-color: var(--border-color2);
+}
+
+.tab-contents .item::after,
+.destination-items .item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    z-index: 4;
+    background-color: rgba(240, 248, 255, 0.468);
+    transition: .25s linear;
+}
+
+.tab-contents .item:hover::after,
+.destination-items .item:hover::after {
+    height: 100px;
+}
 
 
 
 
+/*==============  suggest services start here  ==============*/
+.suggest-item {
+    position: relative;
+    /* padding: 2px; */
+    height: 244px;
+    overflow: hidden;
+    border-radius: 6px;
+    cursor: pointer;
+}
 
+.suggest-item .img-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    padding: 12px;
+}
+
+.suggest-item .img-wrapper img {
+    height: 100%;
+    width: 100%;
+}
+
+.suggest-item .img-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-color: rgba(47, 47, 47, 0.281);
+    z-index: 3;
+    transition: background-color .24s linear;
+}
+
+.suggest-item .text {
+    position: absolute;
+    z-index: 5;
+    bottom: 24px;
+    left: 24px;
+}
+
+.suggest-item:hover .img-wrapper::after {
+    background-color: unset;
+}
 
 /*==============  footer start here  ==============*/
 footer {
     margin-top: auto;
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    /*=====  search-content  =====*/
+    .search-content {
+        position: relative;
+        z-index: 4;
+        background-color: rgba(255, 255, 255, 0.684);
+        /* background-color: white; */
+        padding: 20px 20px;
+        height: 450px;
+        margin: 0px auto;
+        width: 100%;
+        max-width: 400px;
+        margin-top: 100px;
+        border-radius: 12px;
+        width: 100%;
+    }
+
+    .search-content .my-input-control {
+        max-width: 400px;
+        width: 100%;
+    }
 }

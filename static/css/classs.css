@@ -22,7 +22,7 @@ body {
     font-family: var(--font-rubik);
     font-weight: var(--fw-400);
     color: var(--text-color);
-    min-width: 600px;
+    min-width: 400px;
     background-color: var(--white);
     /* min-height: 100%; */
     display: flex;
@@ -288,6 +288,10 @@ tr {
 
 .my-border-bottom {
     border-bottom: 1px solid var(--border-color2);
+}
+
+.my-border-bottom-blue {
+    border-bottom: 1px solid var(--blue);
 }
 
 .my-border-bottom-1 {
@@ -590,6 +594,10 @@ tr {
     color: var(--gray);
 }
 
+.my-text-blue {
+    color: var(--blue);
+}
+
 .my-text-gray2 {
     color: var(--gray2);
 }
@@ -695,6 +703,22 @@ tr {
     color: var(--primary-color);
 }
 
+
+.section-title {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 38px;
+    width: 9px;
+    height: 9px;
+    background-color: blueviolet;
+    border-radius: 50%;
+}
 
 
 /*______  Word spacing _____*/
@@ -1651,7 +1675,7 @@ tr {
 .my-input-control input::placeholder,
 textarea::placeholder {
     font-weight: var(--fw-400);
-    color: #a39e9e;
+    color: #7e7b7b;
     font-size: var(--fs-sm);
     font-family: inherit;
 }
