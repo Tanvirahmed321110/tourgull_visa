@@ -50,7 +50,8 @@ header img {
     background-color: rgba(255, 255, 255, 0.684);
     /* background-color: white; */
     padding: 40px 50px;
-    height: 180px;
+    padding-top: 16px;
+    height: 215px;
     margin: 0px auto;
     width: 100%;
     max-width: 1140px;
@@ -138,6 +139,7 @@ header img {
 
 
 
+/* Category Area */
 .category-area .down-icon {
     position: absolute;
     right: 24px;
@@ -159,6 +161,10 @@ header img {
 
 
 /*==============  Tab Section start here  ==============*/
+.search-country-name {
+    background-color: #F5EFEA !important;
+}
+
 .search-country-name input {
     width: 300px;
     border: none;
@@ -207,6 +213,10 @@ header img {
 
 
 /*==============  suggest services start here  ==============*/
+.suggest-services {
+    background-color: #F5EFEA;
+}
+
 .suggest-item {
     position: relative;
     /* padding: 2px; */
@@ -265,6 +275,8 @@ footer {
 
 
 
+
+/*==============  responsive  start here  ==============*/
 @media screen and (max-width: 768px) {
 
     /*=====  search-content  =====*/
@@ -273,18 +285,18 @@ footer {
         z-index: 4;
         background-color: rgba(255, 255, 255, 0.684);
         /* background-color: white; */
-        padding: 20px 20px;
+        padding: 28px;
         height: 450px;
         margin: 0px auto;
         width: 100%;
-        max-width: 400px;
+        max-width: 500px;
         margin-top: 100px;
         border-radius: 12px;
         width: 100%;
     }
 
     .search-content .my-input-control {
-        max-width: 400px;
+        max-width: 500px;
         width: 100%;
     }
 }
