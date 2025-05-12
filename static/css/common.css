@@ -90,7 +90,6 @@ header img {
 }
 
 
-
 .search-content .my-input-control .label {
     padding: 4px 24px;
     border-radius: 6px;
@@ -139,7 +138,7 @@ header img {
 
 
 
-/* Category Area */
+/*=====  Category Area  =====*/
 .category-area .down-icon {
     position: absolute;
     right: 24px;
@@ -174,9 +173,7 @@ header img {
     box-shadow: var(--shadow-1);
 }
 
-.search-country-name input::placeholder {
-    /* color: var(--primary-color); */
-}
+
 
 
 .tab-contents .item,
@@ -184,6 +181,7 @@ header img {
     position: relative;
     transition: .25s linear;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .tab-contents .item:hover,
@@ -209,7 +207,21 @@ header img {
     height: 100px;
 }
 
+.item .hide-content {
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    width: 100%;
+    transition: .3s linear;
+    background-color: rgba(71, 68, 68, 0.677);
+    padding: 12px;
+    z-index: 6;
+    color: wheat;
+}
 
+.item:hover .hide-content {
+    bottom: 0;
+}
 
 
 /*==============  suggest services start here  ==============*/
@@ -264,6 +276,11 @@ header img {
 .suggest-item:hover .img-wrapper::after {
     background-color: unset;
 }
+
+
+
+
+
 
 /*==============  footer start here  ==============*/
 footer {
