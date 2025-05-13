@@ -53,23 +53,3 @@ var swiper = new Swiper(".special-offer-slider", {
         480: { slidesPerView: 2 },
     },
 });
-
-
-// For special offer slider
-var swiper = new Swiper(".suggest-slider", {
-    slidesPerView: "auto", // Automatically adjust slide width
-    spaceBetween: 20,
-    loop: true,
-    autoplay: {
-        delay: 0, // No delay, continuous movement
-        disableOnInteraction: false,
-    },
-    speed: 5000, // Adjust to control smoothness
-    freeMode: true, // Enables continuous smooth scrolling
-    freeModeMomentum: true, // Adds inertia effect
-    breakpoints: {
-        1024: { slidesPerView: 3 },
-        768: { slidesPerView: 2 },
-        480: { slidesPerView: 1 },
-    },
-});

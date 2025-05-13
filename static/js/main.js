@@ -24,6 +24,8 @@ function setupTabs(buttonSelector, contentSelector, tabMap) {
     const tabButtons = document.querySelectorAll(buttonSelector);
     const tabContents = document.querySelectorAll(contentSelector);
 
+    if (tabButtons.length === 0 || tabContents.length === 0) return;
+
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
             // Remove active class from all buttons
@@ -44,8 +46,7 @@ function setupTabs(buttonSelector, contentSelector, tabMap) {
         });
     });
 }
-
-// Usage
+// Usage tab for home page
 setupTabs('.tab-buttons .tab-button', '.tab-contents .tab-content', {
     tourlist: 'tab1',
     business: 'tab2',
@@ -53,3 +54,40 @@ setupTabs('.tab-buttons .tab-button', '.tab-contents .tab-content', {
     stydy: 'tab4',
     other: 'tab5'
 });
+
+// Usage tab for visa information page
+setupTabs('.tab-buttons .tab-button', '.tab-contents .tab-content', {
+    information: 'tab1',
+    progessing_time: 'tab2',
+    faq: 'tab3',
+    office: 'tab4',
+    visa_free: 'tab5',
+    specification: 'tab6',
+});
+
+
+
+function sliderF(className) {
+    const slider = document.querySelector(className)
+    if (slider) {
+        var swiper = new Swiper(slider, {
+            slidesPerView: "auto", // Automatically adjust slide width
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 0, // No delay, continuous movement
+                disableOnInteraction: false,
+            },
+            speed: 5000, // Adjust to control smoothness
+            freeMode: true, // Enables continuous smooth scrolling
+            freeModeMomentum: true, // Adds inertia effect
+            breakpoints: {
+                1024: { slidesPerView: 3 },
+                768: { slidesPerView: 2 },
+                480: { slidesPerView: 1 },
+            },
+        });
+    }
+}
+// For special offer slider
+sliderF('.suggest-slider')

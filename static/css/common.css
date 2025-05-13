@@ -292,6 +292,53 @@ footer {
 
 
 
+/*===========================================*/
+/*=======  For Visa Information Page  =======*/
+/*===========================================*/
+.information-and-form {
+    display: flex;
+    gap: 24px;
+}
+
+
+.information-and-form .left {
+    width: calc(100% - 374px);
+}
+
+
+.information-and-form .right-form {
+    width: 350px;
+    background-color: var(--white);
+    box-shadow: var(--shadow-2);
+    border: 1px solid var(--border-color);
+    /* height: 222px; */
+    border-radius: 6px;
+    padding: 20px 16px;
+    background-color: #F5EFEA;
+    background-color: var(--primary-color);
+    background-color: var(--gray);
+}
+
+.right-form .my-input-control {
+    background-color: var(--white);
+    padding: 12px;
+    border-radius: 4px;
+    box-shadow: var(--shadow-1);
+}
+
+.right-form .my-input-control input,
+.right-form textarea {
+    margin-top: 6px;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--border-color2);
+    padding: 0;
+}
+
+.right-form .my-input-control input:focus,
+.right-form textarea:focus {
+    border-color: var(--primary-color);
+}
 
 /*==============  responsive  start here  ==============*/
 @media screen and (max-width: 768px) {
@@ -301,7 +348,6 @@ footer {
         position: relative;
         z-index: 4;
         background-color: rgba(255, 255, 255, 0.684);
-        /* background-color: white; */
         padding: 28px;
         height: 450px;
         margin: 0px auto;
@@ -315,5 +361,24 @@ footer {
     .search-content .my-input-control {
         max-width: 500px;
         width: 100%;
+    }
+
+    .my-input-control input {
+        max-width: 270px !important;
+    }
+
+    .information-and-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .information-and-form .left {
+        width: 100%;
+    }
+
+    .information-and-form .right-form {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
     }
 }
