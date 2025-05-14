@@ -46,25 +46,17 @@ function setupTabs(buttonSelector, contentSelector, tabMap) {
         });
     });
 }
-// Usage tab for home page
-setupTabs('.tab-buttons .tab-button', '.tab-contents .tab-content', {
-    tourlist: 'tab1',
-    business: 'tab2',
-    medical: 'tab3',
-    stydy: 'tab4',
-    other: 'tab5'
-});
+
 
 // Usage tab for visa information page
 setupTabs('.tab-buttons .tab-button', '.tab-contents .tab-content', {
-    information: 'tab1',
-    progessing_time: 'tab2',
-    faq: 'tab3',
-    office: 'tab4',
-    visa_free: 'tab5',
-    specification: 'tab6',
+    information: 'into_1',
+    progessing_time: 'into_2',
+    faq: 'into_3',
+    office: 'into_4',
+    visa_free: 'into_5',
+    specification: 'into_6',
 });
-
 
 
 function sliderF(className) {

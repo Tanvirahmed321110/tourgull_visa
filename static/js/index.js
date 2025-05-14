@@ -53,3 +53,13 @@ var swiper = new Swiper(".special-offer-slider", {
         480: { slidesPerView: 2 },
     },
 });
+
+
+// Usage tab for home page
+setupTabs('.tab-buttons .tab-button', '.tab-contents .tab-content', {
+    tourlist: 'tab1',
+    business: 'tab2',
+    medical: 'tab3',
+    stydy: 'tab4',
+    other: 'tab5'
+});
