@@ -427,7 +427,7 @@ footer {
 .keywords .key {
     padding: 7px 12px;
     border-radius: 2px;
-    background-color: var(--primary-color);
+    background-color: var(--gray);
     color: #F5EFEA;
     text-align: center;
     cursor: pointer;
@@ -435,7 +435,7 @@ footer {
 }
 
 .keywords .key:hover {
-    background-color: var(--primary-hover-color);
+    background-color: var(--primary-color);
 }
 
 
