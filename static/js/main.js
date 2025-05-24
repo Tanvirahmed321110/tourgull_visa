@@ -19,7 +19,38 @@ activeF('.tab-buttons .tab-button')
 
 
 
-// For Tabs here
+// // Tab Function Here main
+// function setupTabs(buttonSelector, contentSelector) {
+//     const tabButtons = document.querySelectorAll(buttonSelector);
+//     const tabContents = document.querySelectorAll(contentSelector);
+
+//     if (tabButtons.length === 0 || tabContents.length === 0) return;
+
+//     tabButtons.forEach(button => {
+//         button.addEventListener('click', () => {
+//             // Remove active from all buttons
+//             tabButtons.forEach(btn => btn.classList.remove('active'));
+//             button.classList.add('active');
+
+//             // Remove active from all contents
+//             tabContents.forEach(content => content.classList.remove('active'));
+
+//             // Activate the matching content
+//             const targetId = button.getAttribute('data-tab');
+//             const targetContent = document.getElementById(targetId);
+//             if (targetContent) {
+//                 targetContent.classList.add('active');
+//             }
+//         });
+//     });
+// }
+
+// // Call the function
+// setupTabs('.tab-buttons .tab-button', '.tab-contents .tab-content');
+
+
+
+// For Tabs here not good
 function setupTabs(buttonSelector, contentSelector, tabMap) {
     const tabButtons = document.querySelectorAll(buttonSelector);
     const tabContents = document.querySelectorAll(contentSelector);
